@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Fallbacks; real values are injected from the content config in layout.tsx. */
+  --accent: 165 176 236;
+  --accent-2: 118 129 201;
+  --bg: 10 11 18;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base text-slate-300 antialiased;
+    /* Faint atmospheric wash; the live 3D scene sits behind everything. */
+    background-image:
+      radial-gradient(50rem 50rem at 85% -10%, rgb(var(--accent-2) / 0.06), transparent 60%),
+      radial-gradient(45rem 45rem at -10% 10%, rgb(var(--accent) / 0.05), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-accent/25 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-white/10;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+
+  /* Hide the native cursor only when the custom cursor is active on fine pointers. */
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent;
+  }
+
+  .surface {
+    @apply bg-[rgb(13_15_24/0.55)] backdrop-blur-md;
+  }
+
+  .card {
+    @apply rounded-xl border border-white/10 bg-[rgb(13_15_24/0.5)] backdrop-blur-md transition-colors duration-300 hover:border-accent/30;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-slate-400 transition-colors;
+  }
+
+  .chip:hover {
+    @apply border-accent/30 text-slate-200;
+  }
+
+  .section-eyebrow {
+    @apply mb-3 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-accent;
+  }
+
+  /* Primary action: restrained, not neon. */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-md border border-accent/40 bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent transition-all duration-200 hover:border-accent/70 hover:bg-accent/15;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 transition-colors duration-200 hover:border-white/30;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
