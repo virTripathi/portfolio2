@@ -10,26 +10,47 @@ export function Experience({ experience }: { experience: ExperienceType[] }) {
       title="Where I've worked"
       description="Four years across SaaS products, distributed systems, and full-stack delivery."
     >
-      <ol className="relative border-l border-white/10 pl-6 sm:pl-8">
+      <ol className="space-y-10">
         {experience.map((job, i) => (
-          <li key={`${job.company}-${job.startDate}`} className="relative pb-12 last:pb-0">
-            <span className="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-base sm:-left-[9px]" />
-            <Reveal delay={i * 0.04}>
-              <div className="card p-5 sm:p-6">
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                  <h3 className="text-lg font-semibold text-white">
-                    {job.title} <span className="text-accent">@ {job.company}</span>
+          <li
+            key={`${job.company}-${job.startDate}`}
+            className="grid grid-cols-[1.25rem_1fr] gap-x-4 sm:grid-cols-[1.5rem_1fr] sm:gap-x-6"
+          >
+            {/* Timeline rail — dot + connector, no negative positioning */}
+            <div className="flex flex-col items-center">
+              <span
+                className="mt-1.5 h-3 w-3 shrink-0 rounded-full border-2 border-accent bg-base"
+                aria-hidden="true"
+              />
+              {i < experience.length - 1 ? (
+                <span className="mt-2 w-px flex-1 bg-white/10" aria-hidden="true" />
+              ) : null}
+            </div>
+
+            <Reveal delay={i * 0.04} className="min-w-0 w-full">
+              <article className="experience-card p-5 sm:p-6">
+                <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                  <h3 className="min-w-0 break-words text-lg font-semibold leading-snug text-white">
+                    {job.title}{' '}
+                    <span className="text-accent">@ {job.company}</span>
                   </h3>
-                  <span className="font-mono text-xs text-slate-500">{job.period}</span>
+                  <span className="shrink-0 font-mono text-xs text-slate-500">{job.period}</span>
                 </div>
 
-                {job.summary ? <p className="mt-2 text-sm text-slate-400">{job.summary}</p> : null}
+                {job.summary ? (
+                  <p className="mt-2 break-words text-sm leading-relaxed text-slate-400">
+                    {job.summary}
+                  </p>
+                ) : null}
 
                 <ul className="mt-4 space-y-2">
                   {job.highlights.map((point, idx) => (
-                    <li key={idx} className="flex gap-2.5 text-sm leading-relaxed text-slate-300">
-                      <span className="mt-2 h-1 w-1 flex-none rounded-full bg-accent" />
-                      {point}
+                    <li
+                      key={idx}
+                      className="flex min-w-0 gap-2.5 text-sm leading-relaxed text-slate-300"
+                    >
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                      <span className="min-w-0 break-words">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -43,7 +64,7 @@ export function Experience({ experience }: { experience: ExperienceType[] }) {
                     ))}
                   </div>
                 ) : null}
-              </div>
+              </article>
             </Reveal>
           </li>
         ))}
