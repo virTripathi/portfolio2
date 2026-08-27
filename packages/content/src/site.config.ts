@@ -16,21 +16,20 @@ export const siteConfig: SiteConfig = {
 
   profile: {
     name: 'Virat Tripathi',
-    role: 'Senior Software Engineer',
+    role: 'Software Engineer',
     tagline:
-      'Backend-focused engineer building reliable APIs, scalable architectures, and distributed systems.',
+      'Software Engineer specializing in large-scale systems, distributed architectures, and SaaS products.',
     summary:
-      "I'm a Senior Software Engineer with 4+ years of experience building SaaS products and scalable web applications using PHP (Laravel, CakePHP), JavaScript/TypeScript, React, NestJS, and Python. My core focus is backend development - designing reliable APIs, scalable architectures, distributed systems, and background processing workflows - while maintaining strong frontend capabilities for delivering complete end-to-end features.",
+      "Software Engineer with 3.5+ years of experience specializing in Large-scale systems, distributed architectures, and SaaS products. Demonstrated Customer Obsession by delivering high-availability services handling 20M+ weekly requests. Proven track record in Innovation across the Full Software Development Life Cycle (SDLC), including Architecture & Design of financial workflows and credit management systems. Strong background in Mentorship, TDD, and AWS infrastructure management.",
     location: 'New Delhi, India',
     email: 'viratofficial07@gmail.com',
     phone: '+91 9695397301',
     resumeUrl: 'https://drive.google.com/file/d/14f7EecScsKZK3O5kIZ5d3p816_Cl8jnR/view?usp=sharing',
     roles: [
-      'Senior Software Engineer',
-      'Backend Specialist',
+      'Software Engineer',
       'Distributed Systems',
-      'API Architect',
-      'AI-Native Workflows',
+      'AWS',
+      'Backend & Full-Stack Engineering',
     ],
     socials: [
       // TODO: replace with your real profile URLs.
@@ -43,109 +42,103 @@ export const siteConfig: SiteConfig = {
 
   experience: [
     {
-      company: 'Cimpress',
-      title: 'Software Engineer',
+      company: 'Cimpress (Pixartprinting)',
+      title: 'Software Engineer, Core Engineering Team',
       period: 'Dec 2024 - Present',
       startDate: '2024-12',
       summary:
-        'Distributed microservices handling high-volume ecommerce workflows across customer, order-management, invoicing, fulfillment, and artwork systems.',
+        'Core Engineering Team - Shared distributed services supporting 20M+ API requests weekly.',
       highlights: [
-        'Contributed to a distributed microservices architecture handling high-volume ecommerce workflows across customer, order-management, invoicing, fulfillment, and artwork systems.',
-        'Created multiple agentic workflows for code reviews, documentation, and API development.',
-        'Contributed in NestJS to the Laravel-to-NestJS migration of a legacy codebase using AI-native workflows.',
+        'Own Architecture & Design for shared distributed services supporting 20M+ API requests weekly across 10+ global B2B/B2C channels.',
+        'Lead the Full SDLC of a credit-limit management system, ensuring high data integrity and consistency for financial workflows.',
+        'Build production backend services using PHP, Laravel, MySQL, Redis, and AWS, with hands-on use of SQS/FIFO SQS, SNS, S3, CloudWatch, Parameter Store, and AWS infrastructure tooling.',
+        'Drive system modernization by migrating legacy PHP services to NestJS microservices, maintaining 100% business behavior parity.',
+        'Work within a strict peer-review culture, regularly reviewing production changes and design/implementation decisions; contribute to engineering quality through TDD, automated testing, refactoring, and static analysis.',
+        'Participated in a rotating production-support schedule every 6 sprints, handling support requests from multiple engineering teams, monitoring CloudWatch for API spikes and service degradation, investigating third-party service outages, and preparing recurring support reports.',
+        'Work across the SDLC from requirements and technical design through implementation, testing, code review, deployment, monitoring, and production support using IaaS-based infrastructure and CI/CD pipelines.',
+        'Mentorship & Leadership: Onboarded and mentored 2 engineers through technical guidance and peer code reviews in an Agile environment.',
+        'Apply GDPR and data-privacy requirements to customer data handling and production APIs.',
+        'Develop internal interfaces and business workflows using Laravel Filament; also contribute to AI-assisted and agentic engineering workflows for development, analysis, documentation, and testing.',
+        'Developed and maintained a multi-tenant React-based internal platform supporting multiple domain-specific custom applications, enabling teams to build and manage workflows on a shared frontend architecture.',
       ],
-      stack: ['NestJS', 'Laravel', 'Microservices', 'AWS', 'AI Agents'],
+      stack: ['NestJS', 'PHP', 'Laravel', 'AWS', 'Microservices', 'TDD', 'React'],
     },
     {
       company: 'Excelledia Ventures',
       title: 'Software Engineer',
       period: 'Feb 2024 - Dec 2024',
       startDate: '2024-02',
-      summary: 'Flagship SaaS product - ISOROBOT.',
+      summary: 'Engineered backend modules for ISOROBOT, a multi-tenant SaaS platform.',
       highlights: [
-        'Worked alongside a team of 20 to develop customized solutions for our flagship SaaS product, ISOROBOT.',
-        'Worked with the latest Laravel practices and gained a deeper understanding of the Laravel ecosystem.',
+        'Engineered backend modules for ISOROBOT, a multi-tenant SaaS platform serving government organizations across the Middle East.',
+        'Designed and maintained core product functionality and client-facing API workflows using PHP and Laravel within a shared multi-tenant architecture.',
+        'Built and maintained Stripe Connect integrations for customer payments and merchant payouts, handling external transaction workflows and webhooks.',
+        'Collaborated within a 20-person engineering team to deliver customized functionality while maintaining shared platform behavior and backend engineering standards.',
       ],
-      stack: ['Laravel', 'PHP', 'MySQL', 'SaaS'],
+      stack: ['Laravel', 'PHP', 'Stripe Connect', 'SaaS', 'API Workflows'],
     },
     {
       company: 'VDK Eduventures',
       title: 'Full Stack Developer',
-      period: 'April 2023 - Feb 2024',
+      period: 'Apr 2023 - Feb 2024',
       startDate: '2023-04',
       highlights: [
-        'Created features such as an in-house loan module and a fully fledged payroll processing system in the company HRMS software built on top of Django.',
-        'Developed a Single-Sign-On (SSO) mechanism using OAuth2 for seamless authentication across various in-house projects.',
+        'Optimized the Drishti IAS platform to support 10M+ monthly active users, focusing on scalability and performance.',
+        'Architected and implemented a Laravel-based SSO platform for centralized authentication across internal and product-facing applications.',
+        'Designed and developed an employee loan-processing workflow and automated payroll-processing system that ingested attendance data to generate payroll inputs and salary slips, with emphasis on business-rule correctness and reliable processing.',
       ],
-      stack: ['PHP', 'Laravel', 'OAuth2', 'PostgreSQL'],
+      stack: ['PHP', 'Laravel', 'SSO', 'Scalability'],
     },
     {
       company: 'VDK Eduventures',
       title: 'Full Stack Intern',
-      period: 'Jan 2023 - April 2023',
+      period: 'Jan 2023 - Apr 2023',
       startDate: '2023-01',
       highlights: [
-        'Developed a POS frontend built on top of the Angular framework for the company at the World Book Fair 2023 held in New Delhi.',
-        'Developed an in-house banners module in the company primary project, drishtiias, built on top of CakePHP.',
+        'Developed an Angular POS frontend and integrated internal modules for production web applications.',
       ],
-      stack: ['Angular', 'CakePHP', 'PHP', 'Laravel'],
+      stack: ['Angular', 'Frontend Development'],
     }
   ],
 
   skills: [
     {
-      category: 'Programming & Scripting',
-      skills: ['PHP (Laravel, CakePHP)', 'JavaScript / TypeScript', 'Python'],
+      category: 'Backend & Architecture',
+      skills: ['PHP', 'Laravel', 'Node.js', 'NestJS', 'REST APIs', 'Microservices', 'System Design', 'Database Design', 'Authentication & Authorization', 'Queues', 'Background Processing', 'Event-Driven Workflows'],
     },
     {
-      category: 'Frameworks & Libraries',
-      skills: ['React.js', 'Inertia', 'Express.js', 'Angular', 'NestJS', 'Next.js'],
+      category: 'Cloud & DevOps',
+      skills: ['AWS (SQS, FIFO SQS, SNS, S3, CloudWatch, Parameter Store, EC2)', 'CloudFormation', 'CodePipeline', 'Docker', 'Linux', 'CI/CD', 'IaaS'],
     },
     {
-      category: 'Databases & Tools',
-      skills: ['MySQL', 'MSSQL', 'PostgreSQL', 'phpMyAdmin', 'Redis'],
-    },
-    {
-      category: 'DevOps & Cloud',
-      skills: ['Linux', 'Apache', 'Docker', 'AWS (EC2, S3, CloudWatch, SQS, SNS)', 'GCP', 'CI/CD'],
-    },
-    {
-      category: 'AI & Automation',
-      skills: [
-        'LLM Integration',
-        'AI Agents',
-        'Workflow Automation',
-        'Gemini APIs',
-        'AI-Assisted Development',
-      ],
+      category: 'Databases',
+      skills: ['MySQL', 'PostgreSQL', 'Redis', 'Query Optimization'],
     },
     {
       category: 'Frontend',
-      skills: ['HTML5', 'CSS3', 'SASS', 'Tailwind CSS', 'Bootstrap', 'Material UI'],
+      skills: ['JavaScript', 'TypeScript', 'Angular', 'React', 'Inertia', 'Tailwind CSS'],
     },
     {
-      category: 'Core Concepts',
-      skills: [
-        'WebSockets',
-        'Queues & Jobs',
-        'System Design (HLD/LLD)',
-        'Data Structures & Algorithms',
-      ],
+      category: 'Quality & Engineering',
+      skills: ['TDD', 'Unit/Integration Testing', 'Code Reviews', 'Static Analysis', 'Refactoring', 'Secure API Development', 'GDPR/Data Privacy'],
+    },
+    {
+      category: 'Integrations & AI',
+      skills: ['Stripe Connect', 'Payment APIs', 'Webhooks', 'OAuth2', 'Third-Party APIs', 'LLM Integrations', 'AI-Assisted Development'],
     },
   ],
 
   projects: [
     {
-      name: 'VIRA',
-      tagline: 'A virtual AI-assistant for scheduling reminders and Google Meet meetings.',
+      name: 'VIRA — AI Virtual Assistant',
+      tagline: 'An AI-powered assistant for scheduling reminders and Google Calendar meetings.',
       description:
-        'A virtual AI-assistant that schedules reminders and Google Meet meetings through text and voice based commands. Built and shipped solo as an independent contractor over 3 months.',
-      stack: ['React', 'Inertia', 'Laravel', 'Tailwind CSS', 'Gemini API', 'Reverb'],
+        'A virtual AI-assistant that schedules reminders and Google Calendar meetings through text and voice commands. Features real-time asynchronous communication and Gemini API integration.',
+      stack: ['React', 'Inertia', 'Laravel', 'Tailwind CSS', 'Gemini API', 'Google Calendar', 'WebSockets'],
       highlights: [
-        'Integrated Google Calendar and the Gemini API to handle user requests and schedule meetings.',
-        'Integrated WebSockets using Reverb for real-time asynchronous communication between the user and the app.',
-        'Worked closely with Stripe APIs and webhooks to implement Connect accounts and receive/transfer payments globally.',
-        'Implemented an in-house analytics management system.',
+        'Engineered an AI-powered assistant for scheduling reminders and Google Calendar meetings through text and voice commands.',
+        'Integrated Gemini API for natural-language request interpretation and Google Calendar for scheduling workflows.',
+        'Implemented real-time asynchronous communication using Laravel Reverb and WebSockets.',
       ],
       links: [],
       featured: true,
